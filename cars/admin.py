@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from cars.models import Car, Tires
+from cars.models import Car
 
 
 @admin.register(Car)
@@ -9,8 +9,3 @@ class CarAdmin(admin.ModelAdmin):
 
     def tires_name(self, obj):
         return obj.tires.name
-
-
-@admin.register(Tires)
-class TiresAdmin(admin.ModelAdmin):
-    list_display = ('name', 'size')
