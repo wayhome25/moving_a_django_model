@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         # Make this depend on your FIRST custom cars migration (테이블명 변경)
-        ('cars', '0002_auto_20180325_1112.py'),
+        ('cars', '0002_auto_20180325_1112'),
     ]
 
     # Convert "operations" to only be "state_operations"
@@ -30,5 +30,5 @@ class Migration(migrations.Migration):
     operations = [
         # state_operations 만 실행함으로써, 장고가 database에 마이그레이션을 적용했다고 생각하게 할 수 있다.
         # 실제로는 cars_tires 테이블을 tires_tires로 이름을 변경한 것이다.
-        migrations.SeperateDatabaseAndState(state_operations=state_operations)
+        migrations.SeparateDatabaseAndState(state_operations=state_operations)
     ]

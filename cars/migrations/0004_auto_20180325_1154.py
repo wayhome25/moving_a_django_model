@@ -24,5 +24,5 @@ class Migration(migrations.Migration):
     operations = [
         # after this state operation, the django db state should match the
         # actual database structure.
-        migrations.SeperateDatabaseAndState(state_operations=state_operations)
+        migrations.SeparateDatabaseAndState(state_operations=state_operations)
     ]
